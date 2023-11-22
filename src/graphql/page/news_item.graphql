@@ -1,0 +1,45 @@
+query($id: Int) {
+  news_paginate(first: 4, ordering: [{orderColumn: "created_at", orderBy: "DESC"}]){
+    data{
+      id
+      title
+      subtitle
+      description
+      img{
+        id
+        path
+        origin_name
+        alt
+        size
+      }
+    }
+  }
+  news_item(id: $id){
+    id
+    title
+    subtitle
+    description
+    date
+    actual
+    category{
+      id
+      title
+    }
+    img{
+      id
+      path
+      origin_name
+      alt
+      size
+    }
+  }
+  about {
+    social{
+      id
+      title
+      icon
+      link
+    }
+  }
+
+}

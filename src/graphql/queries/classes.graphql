@@ -1,0 +1,6 @@
+query {
+  classes {
+    id
+    title
+  }
+}

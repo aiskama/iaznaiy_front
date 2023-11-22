@@ -1,0 +1,227 @@
+.btn {
+  background none
+  max-width 315px
+  width 100%
+  height: 71px;
+  font-weight: 700;
+  font-size: 1.125em
+  line-height: 20px;
+  text-transform uppercase
+  border-radius 6px
+  background-color none
+  border 3px solid var(--white)
+  color var(--black)
+  cursor pointer
+  display inline-flex
+  justify-content center
+  text-align center
+  align-items center
+  gap 10px
+  transition var(--transition)
+  outline none
+
+  &:active:not(:disabled) {
+    transform scale(0.95)
+    background-color var(--blue-hover)
+    color var(--white)
+  }
+
+  &:hover:not(:disabled) {
+    background var(--white)
+    color var(--black)
+  }
+
+  &:disabled {
+    opacity 0.8
+    cursor not-allowed
+    //filter: grayscale(1);
+  }
+
+  .icon {
+    width 24px
+    height 24px
+
+    svg path {
+      fill var(--white)
+    }
+  }
+
+  &--sm {
+    height 54px
+    width 100%
+    max-width 177px
+    font-size 1.25em
+    text-transform none
+  }
+
+  &--md {
+    max-width 216px
+    width 100%
+    height 54px
+  }
+
+  &--lg {
+    max-width 660px
+    width 100%
+    height 71px
+  }
+
+  &--yellow {
+    background-color var(--yellow)
+    color var(--black)
+    border-color var(--yellow)
+
+    .icon svg path {
+      fill var(--black)
+    }
+
+    &:hover:not(:disabled) {
+      background-color var(--white)
+      color var(--black)
+      border-color var(--yellow)
+    }
+
+    &:active:not(:disabled) {
+      background-color var(--white)
+      color var(--black)
+      border-color var(--yellow)
+    }
+  }
+
+  &--gray {
+    background-color var(--gray)
+    color var(--black)
+    border-color var(--gray)
+    cursor not-allowed
+
+    &:hover:not(:disabled) {
+      background-color var(--gray-o7)
+      color var(--black)
+      border-color var(--gray-o7)
+    }
+
+    &:active:not(:disabled) {
+      background-color var(--gray-o7)
+      color var(--black)
+      border-color var(--gray-o7)
+    }
+  }
+
+  &--white {
+    background-color var(--white)
+    color var(--black)
+    border-color var(--white)
+
+    .icon svg path {
+      fill var(--black)
+    }
+
+    &:hover:not(:disabled) {
+      background-color transparent
+      color var(--black)
+      border-color var(--white)
+    }
+
+    &:active:not(:disabled) {
+      background-color transparent
+      color var(--black)
+      border-color var(--white)
+    }
+  }
+
+  &--orange {
+    background-color var(--orange)
+    color var(--white)
+    border-color var(--orange)
+
+    &:hover:not(:disabled) {
+      background-color var(--white)
+      color var(--black)
+      border-color var(--orange)
+    }
+
+    &:active:not(:disabled) {
+      background-color var(--white)
+      color var(--black)
+      border-color var(--orange)
+    }
+  }
+
+  &--blur-o7 {
+    border none
+    color var(--black)
+    background: rgba(255, 255, 255, 0.7);
+    //backdrop-filter: blur(19.5px)
+
+    .icon svg path {
+      fill var(--black)
+    }
+
+    &:hover:not(:disabled) {
+      background-color var(--white)
+      color var(--black)
+    }
+
+    &:active:not(:disabled) {
+      background-color var(--white)
+      color var(--black)
+    }
+  }
+  &--blur-o2 {
+    border 1px solid var(--white)
+    color var(--white)
+    background: rgba(0, 0, 0, 0.5)
+    //backdrop-filter: blur(2px)
+
+
+    .icon svg path {
+      transition var(--transition)
+      fill var(--white)
+    }
+
+    &:hover:not(:disabled) {
+      background-color var(--white)
+      color var(--black)
+
+      .icon {
+        svg path {
+          fill var(--black)
+        }
+      }
+    }
+
+    &:active:not(:disabled) {
+      background-color var(--white)
+      color var(--black)
+    }
+  }
+  &--link {
+    border 1px solid var(--black)
+    color var(--black)
+    background transparent
+    height 54px
+    padding 0 20px
+    text-transform none
+    font-weight 500
+
+    .icon {
+      width 20px
+      height 20px
+
+      svg path {
+        fill none
+      }
+    }
+
+    &:hover:not(:disabled) {
+      border 1px solid var(--black)
+      background-color var(--white)
+      color var(--black)
+    }
+
+    //&:active:not(:disabled) {
+    //  background-color var(--white)
+    //  color var(--black)
+    //}
+  }
+}

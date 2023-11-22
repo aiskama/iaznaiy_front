@@ -1,0 +1,29 @@
+query($first: Int) {
+  news_paginate(first: $first) {
+    paginatorInfo {
+      total
+    }
+    data {
+      id
+      title
+      subtitle
+      img {
+        id
+        path
+        origin_name
+        alt
+        size
+        type
+      }
+    }
+  }
+  about {
+    social{
+      id
+      title
+      icon
+      link
+    }
+  }
+
+}

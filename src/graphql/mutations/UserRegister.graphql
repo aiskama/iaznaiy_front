@@ -1,0 +1,33 @@
+mutation (
+$name: String,
+$surname: String,
+$patronymic: String,
+$email: String,
+$phone: String,
+$parent_name: String,
+$parent_surname: String,
+$parent_patronymic: String,
+$region: String,
+$school: String,
+$class_id: Int,
+$password: String,
+$password_confirmation: String,
+) {
+  UserRegister(
+    name: $name,
+    surname: $surname,
+    patronymic: $patronymic,
+    email: $email,
+    phone: $phone,
+    parent_name: $parent_name,
+    parent_surname: $parent_surname,
+    parent_patronymic: $parent_patronymic,
+    region: $region,
+    school: $school,
+    class_id: $class_id,
+    password: $password,
+    password_confirmation: $password_confirmation,
+  ) {
+    token
+  }
+}

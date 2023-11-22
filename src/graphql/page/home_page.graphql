@@ -1,0 +1,45 @@
+query {
+  olympiad_categories_paginate(first: 6){
+    data{
+      id
+      title
+      img{
+        id
+        path
+        origin_name
+        alt
+        size
+        type
+      }
+    }
+  }
+  news_paginate(first: 4, ordering: [{orderColumn: "created_at", orderBy: "DESC"}]){
+    data{
+      id
+      title
+      subtitle
+      description
+      img{
+        id
+        path
+        origin_name
+        alt
+        size
+      }
+    }
+  }
+  about {
+    social{
+      id
+      title
+      icon
+      link
+    }
+  }
+  f_a_q_s{
+    id
+    title
+    question
+    answer
+  }
+}

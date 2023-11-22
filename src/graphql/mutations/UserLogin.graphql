@@ -1,0 +1,23 @@
+mutation($email: String, $password: String) {
+  UserLogin(email: $email, password: $password) {
+    token
+    user {
+      id
+      name
+      surname
+      patronymic
+      email
+      phone
+      parent_name
+      parent_surname
+      parent_patronymic
+      head_img {
+        id
+        path
+        origin_name
+        alt
+        size
+      }
+    }
+  }
+}

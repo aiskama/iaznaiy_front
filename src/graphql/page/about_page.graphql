@@ -1,0 +1,32 @@
+query {
+  about {
+    description
+    partner{
+      id
+      title
+      icon
+      link
+    }
+    social{
+      id
+      title
+      icon
+      link
+    }
+  }
+  news_paginate(first: 4, ordering: [{orderColumn: "created_at", orderBy: "DESC"}]){
+    data{
+      id
+      title
+      subtitle
+      description
+      img{
+        id
+        path
+        origin_name
+        alt
+        size
+      }
+    }
+  }
+}

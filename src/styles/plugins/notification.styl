@@ -1,0 +1,53 @@
+.vue-notification-group {
+  display: block;
+  position: fixed;
+  z-index: 5000;
+  margin: 40px 30px
+}
+.vue-notification-wrapper {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.notification-title {
+  font-weight: 600;
+}
+.vue-notification-template {
+  display: block;
+  box-sizing: border-box;
+  background: white;
+  text-align: left;
+}
+
+.vue-notification {
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+  font-size 0.875em
+  padding 15px 20px
+  margin: 0 5px 5px;
+  color: var(--white);
+  border-radius var(--main_radius)
+  background: var(--dark);
+  border-left: 5px solid var(--black);
+}
+.vue-notification.warn {
+  background-color var(--yellow)
+  border-left-color brown
+}
+.vue-notification.error {
+  background-color var(--red)
+  border-left-color brown
+}
+.vue-notification.success {
+  background-color var(--green)
+  border-left-color darkgreen
+}
+.vn-fade-enter-active, .vn-fade-leave-active, .vn-fade-move  {
+  transition: all .5s;
+}
+.vn-fade-enter, .vn-fade-leave-to {
+  opacity: 0;
+}

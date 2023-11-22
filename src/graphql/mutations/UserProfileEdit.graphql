@@ -1,0 +1,28 @@
+mutation (
+  $name: String,
+  $surname: String,
+  $patronymic: String,
+  $parent_name: String,
+  $parent_surname: String,
+  $parent_patronymic: String,
+  $birthday: DateTime,
+  $phone: String,
+  $email: String,
+  $head_img: ImgInput,
+) {
+  UserProfileEdit(
+    name: $name,
+    surname: $surname,
+    patronymic: $patronymic,
+    parent_name: $parent_name,
+    parent_surname: $parent_surname,
+    parent_patronymic: $parent_patronymic,
+    phone: $phone,
+    birthday: $birthday,
+    email: $email,
+    head_img: $head_img
+  ) {
+    code
+    message
+  }
+}

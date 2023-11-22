@@ -1,0 +1,25 @@
+# noinspection GraphQLUnresolvedReference
+mutation($test_id: Int!, $answer_id: [Int], $answer: String) {
+  TestAnswer(test_id: $test_id, answer_id: $answer_id, answer: $answer) {
+    test {
+      id
+      type {
+        code
+        name
+      }
+      title
+      text
+      test_answers {
+        id
+        answer
+
+        img_answer {
+          path
+          alt
+        }
+      }
+    }
+    finished
+    points
+  }
+}

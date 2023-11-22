@@ -1,0 +1,42 @@
+# noinspection GraphQLUnresolvedReference
+mutation($id: Int ) {
+  OlympiadStart(id: $id) {
+    expire_date
+    started_at
+    duration
+    test {
+      id
+      type {
+        code
+        name
+      }
+      title
+      text
+      test_answers {
+        id
+        answer
+
+        img_answer {
+          path
+          alt
+        }
+      }
+    }
+    olympiad {
+      class{
+        title
+      }
+      category{
+        title
+      }
+      img{
+        id
+        path
+        origin_name
+        alt
+        size
+        type
+      }
+    }
+  }
+}

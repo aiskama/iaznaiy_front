@@ -1,0 +1,6 @@
+mutation($email: String, $name: String){
+  ClaimCreate(email: $email, name: $name){
+    code
+    message
+  }
+}

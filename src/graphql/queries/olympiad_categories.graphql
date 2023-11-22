@@ -1,0 +1,6 @@
+query{
+  olympiad_categories{
+    id
+    title
+  }
+}

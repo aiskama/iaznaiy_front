@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+  <!--title-->
+  <!--meta-->
+  <!--link-->
+  <style>
+  .critical-error {
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - (100vw - 100%));
+    height: calc(100vh - 100px);
+    min-height: 100%;
+  }
+
+  .critical-error__title {
+    font-size: 4em;
+    line-height: 1;
+  }
+
+  .critical-error__subtitle {
+    font-size: 2.24em;
+    line-height: 1;
+    margin: 10px 0 20px;
+  }
+
+  .critical-error__text {
+    font-size: 1.125em;
+    max-width: 450px;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+<div class="critical-error">
+  <div class="critical-error__title">500</div>
+  <div class="critical-error__subtitle">Внутренняя ошибка сервера</div>
+  <div class="critical-error__text">Извините, на нашем сервере произошла ошибка. <br>Мы уже занимаемся её решением</div>
+</div>
+</body>
+</html>

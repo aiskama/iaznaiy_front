@@ -1,0 +1,6 @@
+mutation($id: Int) {
+  OrderCreate(id: $id) {
+    payment_url
+    need_pay
+  }
+}

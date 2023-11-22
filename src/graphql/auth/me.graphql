@@ -1,0 +1,24 @@
+query {
+  me {
+    id
+    name
+    surname
+    patronymic
+    parent_name
+    parent_surname
+    parent_patronymic
+    email
+    phone
+    birthday
+    head_img {
+      id
+      path
+      origin_name
+      alt
+      type
+    }
+    status {
+      code
+    }
+  }
+}

@@ -1,0 +1,50 @@
+query($class_id: Int, $first: Int, $category_id: Int) {
+  olympiads_paginate(class_id: $class_id, first: $first, category_id: $category_id, ordering:[{orderColumn: "created_at", orderBy: "DESC"}]) {
+    paginatorInfo{
+      total
+    }
+    data {
+      id
+      title
+      description
+      date_end
+      price
+      purchased
+      class {
+        id
+        title
+      }
+      img {
+        id
+        path
+        origin_name
+        alt
+        size
+        type
+      }
+    }
+  }
+  olympiad_categories_paginate{
+    data{
+      id
+      title
+      img{
+        id
+        path
+        origin_name
+        alt
+        size
+        type
+      }
+    }
+  }
+  about {
+    social{
+      id
+      title
+      icon
+      link
+    }
+  }
+
+}

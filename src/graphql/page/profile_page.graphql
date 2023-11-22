@@ -1,0 +1,52 @@
+query {
+  my_olympiads {
+    id
+    title
+    price
+    duration
+    tests_count
+    completed
+    result{
+      id
+      points
+    }
+    status {
+      id
+      name
+      code
+    }
+    tests {
+      id
+      percent
+      category_level {
+        id
+        title
+        points
+      }
+    }
+    description
+    category {
+      id
+      title
+    }
+    class {
+      id
+      title
+      position
+    }
+    img {
+      id
+      path
+      origin_name
+      alt
+    }
+  }
+  about {
+    social{
+      id
+      title
+      icon
+      link
+    }
+  }
+}

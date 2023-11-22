@@ -1,0 +1,248 @@
+.select {
+  background: var(--white);
+  border: 2px solid var(--gray-dark)
+  border-right none
+  border-top none
+  border-left none
+  box-sizing: border-box;
+  border-radius: var(--small_radius);
+  position relative
+  cursor text
+  height 44px
+  transition var(--transition)
+  display flex
+  margin 0
+
+  &:focus-within {
+
+    ::placeholder {
+      color var(--orange)
+    }
+  }
+
+  &--error {
+    border-color var(--red-500)
+  }
+
+  &__errors {
+    font-size: 0.750em;
+    line-height: 15px;
+    color: var(--red-500);
+    display flex
+    flex-direction column
+    gap 5px
+
+    &--messages {
+      color: var(--body-color-muted);
+    }
+  }
+
+  &__container {
+    display flex
+    flex-direction column
+    align-self flex-start
+    gap 5px
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 0.875em;
+    line-height: 20px;
+    color: var(--body-color-muted);
+    white-space pre-line
+  }
+
+  &__field {
+    border-radius var(--small_radius)
+    border none
+    box-sizing border-box
+    background none
+    width 100%
+    height 100%
+    padding 20px 12px 5px
+    outline none
+    font-weight: normal;
+    font-size: 0.875em;
+    color: var(--dark);
+    appearance none
+    resize vertical
+    z-index 1
+
+    &::placeholder {
+      font-weight: normal;
+      color var(--dark-light)
+    }
+  }
+
+  &--loading {
+    background-color var(--accent-o1);
+    background-size: 31px 31px;
+    background-image: linear-gradient(-45deg, rgba(0, 0, 0, .1) 25%, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .1) 0, rgba(0, 0, 0, .1) 75%, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0));
+    animation: stripped 2s linear 0s infinite normal none running;
+  }
+
+  &--no-title {
+    & ^[0]__field {
+      padding 15px 12px
+    }
+  }
+
+  &--list {
+    border-radius var(--small_radius) var(--small_radius) 0 0
+
+    & ^[0]__action {
+      z-index 11
+
+      .icon {
+        transform rotate(180deg)
+      }
+    }
+
+    & ^[0]__clear {
+      z-index 12
+    }
+  }
+
+  &--list-top {
+    border-radius 0 0 var(--small_radius) var(--small_radius)
+
+    & ^[0]__action {
+      z-index 11
+
+      .icon {
+        transform rotate(180deg)
+      }
+    }
+
+    & ^[0]__list {
+      border-radius var(--small_radius) var(--small_radius) 0 0
+      absolute top left
+      bottom initial
+      transform translateY(calc(-100% + 1px))
+    }
+
+    & ^[0]__clear {
+      z-index 12
+    }
+  }
+
+  &__action {
+    background none
+    outline none
+    border none
+    cursor pointer
+    padding 10px
+    absolute right top bottom
+    margin auto
+    transition .2s
+    z-index 2
+    display: flex;
+    align-items: center;
+
+    &:active
+    &:focus {
+      box-shadow: 0 0 0 2px var(--accent);
+      border-radius: var(--small_radius);
+    }
+
+    .icon {
+      transition .2s
+      width 20px
+      height 20px
+
+      svg path {
+        fill var(--dark-light)
+        stroke none
+      }
+    }
+  }
+
+  &__clear {
+    @extend .select__action
+    transform translateX(-50%)
+    z-index 3
+  }
+
+  &__field {
+    padding 15px 12px
+    z-index 1
+
+    &-container {
+      position relative
+      width 100%
+    }
+  }
+
+  &__selected {
+    display flex
+    gap 4px
+    align-items center
+    margin-left 12px
+    flex-shrink: 0;
+    +below(480px) {
+      display none
+    }
+
+    .icon {
+      width 12px
+      height 12px
+      display flex
+      align-items center
+      justify-content center
+
+      svg {
+        width 100%
+        height 100%
+      }
+    }
+
+    &-item {
+      cursor pointer
+      background var(--accent)
+      border-radius var(--small_radius)
+      padding 6px 12px
+      font-size: 0.8750em;
+      line-height: 16px;
+      text-align: center;
+      color: var(--white);
+      text-decoration none
+      flex-shrink: 0;
+
+      &:hover {
+        color var(--white)
+      }
+
+      &:active
+      &:focus {
+        box-shadow: 0 0 0 4px var(--accent);
+      }
+
+      &:first-child {
+        display flex
+        gap 4px
+        align-items center
+
+        span {
+          display flex
+        }
+
+        .icon {
+          width 14px
+          height 14px
+
+          svg {
+            width: 100%;
+            height 100%
+            svg(var(--white))
+          }
+        }
+      }
+    }
+  }
+
+  &--multiple {
+    display flex
+    align-items center
+    padding-right 40px
+  }
+}
